@@ -1,0 +1,31 @@
+/vendor/
+# Node.js
+node_modules/           # Exclude node.js dependencies
+npm-debug.log*          # Exclude npm debug logs
+yarn-error.log          # Exclude yarn error logs
+.pnpm-debug.log*        # Exclude pnpm debug logs
+dist/                   # Exclude build directory if you're using build tools
+coverage/               # Exclude coverage reports (from testing tools)
+.env                    # Exclude environment variable files
+.env.local              # Local environment variables file
+.DS_Store               # macOS system files
+.vscode/                # VS Code editor settings (optional)
+
+# PHP
+vendor/                 # Exclude PHP dependencies (Composer)
+composer.lock           # Exclude the lock file if you want to regenerate it during installation
+*.log                   # Exclude log files
+*.cache                 # Exclude cache files
+storage/                # Exclude storage (logs, caches) in Laravel projects
+bootstrap/cache/        # Exclude compiled files in Laravel
+.env                    # Exclude environment variables for PHP (like in Laravel)
+
+# Common OS files
+Thumbs.db               # Windows system files
+.DS_Store               # macOS system files
+
+# IDE-specific
+.idea/                  # PhpStorm / WebStorm (JetBrains) project settings
+*.sublime-workspace     # Sublime Text workspace
+*.sublime-project       # Sublime Text project
+*.vscode/               # VS Code settings

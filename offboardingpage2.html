@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Off-Boarding Form</title>
+        <link href="dist/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+        <script src="js/dataInsertion.js" defer></script>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/certification.js"></script>
+</head>
+<body class="overflow-x-hidden">
+    <form id="myForm">
+    <div class="w-full min-h-screen bg-white flex flex-col">
+        <!-- Top Bar -->
+        <div class="w-full h-20 p-5 bg-UIP-blue shadow flex items-center px-10">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-black/10 rounded-full">
+                    <a target="_blank" href="https://www.uip.ph/">
+                        <img src="./img/uip-icons/UIP_solidA.png">
+                    </a>
+                </div>
+                <div class="text-white lg:text-2xl text-xl font-medium font-poppins"><a target="_blank"
+                        href="https://www.uip.ph/">UIP Inc.</a></div>
+            </div>
+        </div>
+
+        <!-- forms section -->
+        <div class="lg:space-y-10 my-4 space-y-6 flex flex-col">
+            <!-- personal section -->
+            <div class="bg-gray-200 lg:px-12 px-5 lg:py-8 lg:mx-20 mx-5 py-6 rounded-md flex flex-col gap-y-4 border-2 border-gray-400">
+                <h1 class="font-bold text-lg lg:text-xl">Personal Information:</h1>
+                <div class="bg-white lg:p-5 py-3 px-7 rounded-md">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-3 lg:gap-12">
+                        <!-- left side -->
+                        <div class="flex flex-col gap-y-3">
+                            <div class="flex flex-col gap-y-3">
+                                <label class="text-sm hidden md:block">Email</label>
+                                <input class="text-sm lg:text-base px-3 py-2 border border-gray-300 rounded-md" type="email" placeholder="Email" required />
+                            </div>
+                            <div class="flex flex-col gap-y-3">
+                                <label class="text-sm hidden md:block">Full Name</label>
+                                <input class="text-sm lg:text-base px-3 py-2 border border-gray-300 rounded-md" type="text" placeholder="Name (Last, First, Middle Initial)" required />
+                            </div>
+                            <div class="flex flex-col gap-y-3">
+                                <label class="text-sm hidden md:block">Application ID</label>
+                                <input class="text-sm lg:text-base px-3 py-2 border border-gray-300 rounded-md" type="number" placeholder="Application ID" required />
+                            </div>
+                            <div class="flex flex-col gap-y-3">
+                                <label class="text-sm hidden md:block">Department</label>
+                                <input class="text-sm lg:text-base px-3 py-2 border border-gray-300 rounded-md" type="text" placeholder="Department" required />
+                            </div>
+                        </div>    
+                        <!-- right side -->
+                        <div class="flex flex-col gap-y-3">
+                            <div class="flex flex-col gap-y-3">
+                                <label class="text-sm hidden md:block">Required Hours</label>
+                                <input class="text-sm lg:text-base px-3 py-2 border border-gray-300 rounded-md" type="number" placeholder="Required Hours" required />
+                            </div>
+                            <div class="flex flex-col gap-y-3">
+                                <label class="text-sm hidden md:block">Completed Hours</label>
+                                <input class="text-sm lg:text-base px-3 py-2 border border-gray-300 rounded-md" type="number" placeholder="Completed Hours" required />
+                            </div>
+                            <div class="flex flex-col gap-y-3">
+                                <label class="text-sm hidden md:block">Google Drive Link</label>
+                                <input class="text-sm lg:text-base px-3 py-2 border border-gray-300 rounded-md" type="text" placeholder="Google Drive Link" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offboarding section -->
+            <div class="bg-gray-200 lg:px-12 lg:py-8 lg:mx-20 px-5 mx-5 py-6 rounded-md flex flex-col gap-y-4 border-2 border-gray-400">
+                <h1 class="font-bold text-lg lg:text-xl">Offboarding Requirements:</h1>
+                <!-- requirements -->
+                <div class="bg-white p-6 rounded-md flex flex-col gap-y-3">
+                    <h3 class="text-base font-semibold">Requirements to be added to Google Drive:</h3>
+                    <p class="text-sm">Update your Google Drive on your <a href="https://melhamconstruction.ph/uip/attendance/index.html">Attendance Tracker</a> and make sure that it is not 
+                        restricted, auto denied for restricted Google Drive. Your Drive must contain the following folders:</p>
+                    <ul class="list-decimal px-6">
+                        <li class="font-bold text-base lg:text-lg">Daily Journals folder</li>
+                        <ul class="list-disc lg:px-5 px-2 mb-2">
+                            <li class="text-sm lg:text-base"><span class="font-bold text-sm lg:text-base">Daily Journal</span> - All your daily journals must be in this folder.</li>
+                            <p class="italic text-sm lg:text-base">File name format: LastName_03-27-23_DAILY JOURNAL #1</p>
+                        </ul>
+                        <li class="font-bold text-base lg:text-lg">Weekly Reports folder</li>
+                        <ul class="list-disc lg:px-5 px-2 mb-2">
+                            <li class="text-sm lg:text-base"><span class="font-bold text-sm lg:text-base">Weekly Report</span> - All your weekly reports must be in this folder. Weekly reports should be signed by your supervisor.</li>
+                            <p class="italic text-sm lg:text-base">File name format: LastName_WEEKLY REPORT_#1</p>
+                        </ul>
+                        <li class="font-bold text-base lg:text-lg">Requirements folder</li>
+                        <ul class="list-disc lg:px-5 px-2 mb-2">
+                            <li class="text-sm lg:text-base"><span class="font-bold text-sm lg:text-base">Signed Narrative Report</span> - must be signed by the intern and supervisor. Download the template and save it in PDF format. Narrative Report Template.</li>
+                            <p class="italic text-sm lg:text-base">File name format: Firstname MI. Lastname - Narrative Report</p>
+                            <p>Link: <a class="text-blue-400 underline" href=" https://docs.google.com/document/d/1D44uAG1yyfg0OPxZiWAu90aa4XX_9nzH/edit?usp=share_link&ouid=113977265430534612592&rtpof=true&sd=true">Click Here</a></p>
+                            <li class="text-sm lg:text-base"><span class="font-bold text-sm lg:text-base">Signed MOA</span> - must be signed and notarized. Save in PDF format.</li>
+                            <p class="italic text-sm lg:text-base">File name format: Firstname MI. Lastname - MOA</p>
+                            <p class="text-sm lg:text-base">Link: <a class="text-blue-400 underline" href=" https://drive.google.com/file/d/1DUF03Jk8U32GIPL4MRkQ-Ld55l7fbf-3/view?usp=sharing%20Fill-out%20guide:%20https://drive.google.com/drive/folders/16MzJbTHG3vNgVyLDwE2NgZcI9yPOesOX?usp=share_link">Click Here</a></p>
+                            <p class="text-sm lg:text-base">Fill-out guide: How to fill-out the Internship Agreement / MOA</p>
+                            <p class="text-sm lg:text-base">Link: <a class="text-blue-400 underline" href="https://drive.google.com/drive/folders/16MzJbTHG3vNgVyLDwE2NgZcI9yPOesOX?usp=share_link">Click Here</a></p>
+                            <li class="font-bold text-sm lg:text-base">Student Internship Requirement</li>
+                            <li class="text-sm lg:text-base"><span class="font-bold text-sm lg:text-base">Resume/CV</span> - Save in PDF format.</li>
+                            <p class="italic text-sm lg:text-base">File name format: Firstname MI. Lastname - Resume/CV</p>
+                        </ul>
+                    </ul>
+                    <p class="text-red-600 lg:text-lg text-base">*IMPORTANT REMINDER: We will not process your request if any of the files mentioned above is not accomplished accordingly. Make sure that all of them are uploaded in your GDrive Requirements folder and follow the naming format.*</p>
+                </div>
+                <!-- others -->
+                <div class="bg-white p-10 rounded-md flex flex-col gap-y-4">
+                    <h1 class="font-bold text-xl">Other:</h1>
+                    <p class="text-base">Files to be put in the requirement folder</p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Left side input with tooltip -->
+                        <div class="flex flex-col gap-y-3">
+                            <label class="text-sm flex items-center">
+                                Testimonial Video
+                                <div class="tooltip-container ml-2">
+                                    <i class="fas fa-info-circle text-UIP-blue"></i>
+                                    <span class="tooltip-text text-xs">Record a 3-minute video of yourself sharing you accomplishments and experiences during your whole internship with UIP Inc. and your company.<br><br>
+                                        ● What do you think is the best learning & experience that this program has taught you?<br>   
+                                        ● How do you think this knowledge & experience will be beneficial to you and your future 
+                                        career?<br>
+                                        ● Share at least 3 milestones you made during your internship.<br>
+                                        ● Suggestions & comments.<br><br>
+
+                                        File name format: Firstname MI. Lastname - Testimonial Video
+                                    </span>
+                                </div>
+                            </label>
+                            <input class="px-3 py-2 border border-gray-300 rounded-md" type="text" placeholder="Insert Link" required />
+                        </div>
+                        <!-- Right side input with tooltip -->
+                        <div class="flex flex-col gap-y-3">
+                            <label class="text-sm flex items-center">
+                                UIP FB Page Review
+                                <div class="tooltip-container ml-2">
+                                    <i class="fas fa-info-circle text-UIP-blue"></i>
+                                    <span class="tooltip-text text-xs">Please provide a review on the UIP Facebook Page and include a screenshot as evidence. The link to the page is:
+                                        <a class="text-blue-400 underline" href="https://www.facebook.com/uipinc?mibextid=ZbWKwL">UIP FB Page</a></p><br>
+                                        File name format: Firstname MI. Lastname - FB Page Review
+                                    </span>
+                                </div>
+                            </label>
+                            <input class="px-3 py-2 border border-gray-300 rounded-md" type="text" placeholder="Insert Link" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification section -->
+            <div class="bg-gray-200 lg:px-12 lg:py-8 lg:mx-20 px-5 mx-5 py-6 rounded-md flex flex-col gap-y-4 border-2 border-gray-400">
+                <h1 class="font-bold text-lg lg:text-xl">Certification Request:</h1>
+                <div class="bg-white pt-3 px-7 rounded-md flex flex-col lg:flex-row gap-y-2 lg:gap-x-36">
+                    <div class="flex flex-col w-full lg:w-1/2 items-start gap-y-4">
+                        <div class="flex flex-row gap-x-3">
+                            <input type="radio" name="certification" id="" onclick="show(0)" />
+                            <p>Scanned</p>
+                        </div>
+                        <input type="email" id="scanned" class="hidden lg:w-3/4 px-3 py-2 border border-gray-300 rounded-md" placeholder="Insert Email" />
+                    </div>
+                    <div class="flex flex-col w-full lg:w-1/2 items-start gap-y-4">
+                        <div class="flex flex-row gap-x-3">
+                            <input type="radio" name="certification" id="" onclick="show(1)" />
+                            <p>Hard Copy</p>
+                        </div>
+                        <a href="https://shopee.ph/product/990492443/18879237781/"><p class="hidden text-blue-500 underline px-3 text-base lg:text-lg" id="hardcopy">Shopee Link</p></a>
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Evaluation section -->
+            <div class="bg-gray-200 px-12 py-8 mx-20 rounded-md flex flex-col gap-y-4">
+                <h1 class="font-bold text-xl">Evaluation Request:</h1>
+                <div class="bg-white p-6 rounded-md flex flex-col gap-y-3">
+                    <p>Attachment of Evaluation Form (Google Drive link, must be editable)</p>
+                    <input type="text" name="" id="" class="w-2/6 px-3 py-2 border border-gray-300 rounded-md" placeholder="Link here" />
+                    <p>Other attachments that requires signature (Google Drive link, must be editable)</p>
+                    <input type="text" name="" id="" class="w-2/6 px-3 py-2 border border-gray-300 rounded-md" placeholder="Link here" />
+                    <p>Email address to forward the evaluation form to (Professor, Advisor, or to you)</p>
+                    <input type="text" name="" id="" class="w-2/6 px-3 py-2 border border-gray-300 rounded-md" placeholder="Link here" />
+                </div>
+            </div>
+
+        </div>
+
+        <!-- buttons -->
+        <div class="mx-20 flex flex-row justify-between mb-5">
+            <a href="/offboardingpage1.html"><button type="button" class="bg-UIP-orange py-3 px-8 rounded-lg text-white">Previous</button></a>
+            <button type="submit" class="bg-UIP-orange py-3 px-8 rounded-lg text-white">Next</button>
+        </div>
+    </div>
+    </form>
+    
+    <!-- popup box NOT FINAL-->
+    <div class="fixed top-20 w-1/3 hidden" id="popup">
+        <div class="flex flex-col justify-center bg-gray-200 opacity-75 rounded-lg p-4">
+            <p class="font-semibold">Are you sure? Please double check your entry because you will not be able to  change your entry after confirming.</p>
+            <div class="flex flex-row justify-between mt-4">
+                <button class="text-white text-lg bg-UIP-orange w-16 py-1 rounded-md" onclick="cancel()">No</button>
+                <button class="text-white text-lg bg-UIP-blue w-16 py-1 rounded-md" onclick="confirm()">Yes</button>
+            </div>
+        </div>    
+    </div>
+
+    <script>
+        $(document).ready(function () {
+          $('.tooltip-container').click(function () {
+            // Toggle the active class to show/hide the tooltip
+            $(this).toggleClass('active');
+          });
+          
+          // Close the tooltip if clicking outside
+          $(document).click(function (event) {
+            if (!$(event.target).closest('.tooltip-container').length) {
+              $('.tooltip-container').removeClass('active');
+            }
+          });
+        });
+
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            document.getElementById("popup").classList.remove("hidden"); // Show the popup
+        });
+
+        function cancel() {
+            document.getElementById("popup").classList.add("hidden");
+        }
+
+        function confirm() {
+            window.location.href = "offboardingpage3.html";
+        }
+      </script>
+</body>
+</html>
